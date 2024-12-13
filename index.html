@@ -7,19 +7,40 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            backgroun-color: #f9f9f9;
+            background-color: #f9f9f9;
             color: #333;
             margin: 0;
-            paddign: 0;
+            padding: 0;
         }
         header {
             background-color: #007BFF; 
             color: white;
-            padding: 10 px 20px;
-            text-aling: center;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
         main {
             padding: 20px;
+        }
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         footer {
             background-color: #333;
@@ -30,23 +51,89 @@
             bottom: 0; 
             width: 100%;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Bienvenido a Mi Página</h1>
     </header>
+
+    <nav>
+        <a href="#intereses">Temas de Interés</a>
+        <a href="#formulario">Formulario</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
     <main>
-        <p>Esta es mi primera página en Github Pages.</p>
-        <h2>Mis enlaces favoritos:</h2>
-        <ul>
-            <li><a href="https://github.com" target="_blank">Gitbub</a></li>
-            <li><a href="https://www.google.com" target="_blank">Google</a></li>
-        </ul>
+        <section id="introduccion">
+            <p>Esta es mi primera página en Github Pages.</p>
+            <h2>Mis enlaces favoritos:</h2>
+            <ul>
+                <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                <li><a href="https://www.google.com" target="_blank">Google</a></li>
+            </ul>
+        </section>
+
+        <section id="intereses">
+            <h2>Mis Temas de Interés</h2>
+            <table>
+                <tr>
+                    <th>Temas</th>
+                    <th>Descripción</th>
+                </tr>
+                <tr>
+                    <td>Desarrollo Web</td>
+                    <td>Me encanta crear páginas y aplicaciones interactivas.</td>
+                </tr>
+                <tr>
+                    <td>Inteligencia Artificial</td>
+                    <td>Explorar cómo las máquinas pueden aprender y resolver problemas.</td>
+                </tr>
+                <tr>
+                    <td>Diseño Gráfico</td>
+                    <td>Crear elementos visuales atractivos y funcionales.</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="formulario">
+            <h2>Envíame tus ideas</h2>
+            <form action="#" method="post">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required><br><br>
+
+                <label for="email">Correo electrónico:</label><br>
+                <input type="email" id="email" name="email" placeholder="Tu correo" required><br><br>
+
+                <label for="mensaje">Tu idea o comentario:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50" placeholder="Escribe aquí tu mensaje"></textarea><br><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Gracias por visitar mi página. ¡Espero tus comentarios!</p>
+        </section>
     </main>
+
     <footer>
         <p>© 2024 Mi Página Web</p>
     </footer>
-    
 </body>
 </html>
+
